@@ -6,7 +6,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
   - [The challenge](#The-challenge)
   - [Screenshot](#Screenshots)
   - [Links](#Links)
-- [My process](#my-process)
+- [My process](#My-process)
   - [Built with](#Built-with)
 - [Author](#Author)
 
