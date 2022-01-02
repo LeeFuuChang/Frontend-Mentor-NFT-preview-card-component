@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | NFT preview card component</title>
+</head>
+
+<body>
+
+    <!-- 
+
+    Our Equilibrium collection promotes balance and calm.
+
+    0.041 ETH
+    3 days left
+    
+    Creation of Jules Wyvern -->
+
+    <div class="card">
+        <div class="card-preview">
+            <a href="#" class="card-preview-content">
+                <img class="card-preview-content-img" src="images/image-equilibrium.jpg" alt="">
+                <img class="card-preview-content-icon" src="images/icon-view.svg" alt="">
+            </a>
+        </div>
+        <div class="card-content">
+            <a href="#"><h3 class="card-content-title">Equilibrium #3429</h3></a>
+            <p class="card-content-description">Our Equilibrium collection promotes balance and calm.</p>
+            <div class="card-content-info">
+                <div class="card-content-info-price">
+                    <img class="card-content-info-price-icon" src="images/icon-ethereum.svg" alt="">
+                    <h4 class="card-content-info-price-price">0.041 ETH</h4>
+                </div>
+                <div class="card-content-info-time">
+                    <img class="card-content-info-time-icon" src="images/icon-clock.svg" alt="">
+                    <h4 class="card-content-info-time-time">3 days left</h4>
+                </div>
+            </div>
+            <span class="card-content-splitline"></span>
+            <div class="card-content-author">
+                <img class="card-content-author-icon" src="images/image-avatar.png" alt="">
+                <h4 class="card-content-author-info">Creation of <a class="card-content-author-info-name" href="#">Jules Wyvern</a></h4>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.leefuuchang.in">LeeFuuChang</a>.
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Outfit', sans-serif;
+        text-decoration: none;
+    }
+
+    body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background: #0d192b;
+    }
+
+
+
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 15px;
+        width: 330px;
+        height: 540px;
+        background: #14253d;
+    }
+
+    .card .card-preview {
+        overflow: hidden;
+        border-radius: 15px;
+        margin: 25px;
+        width: 280px;
+        height: 280px;
+    }
+    .card .card-preview .card-preview-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .card .card-preview .card-preview-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .card .card-preview .card-preview-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .card .card-preview .card-preview-content-icon {
+        transition-duration: 0.2s;
+        padding: 100%;
+        opacity: 0;
+        z-index: 1;
+    }
+    .card .card-preview:hover .card-preview-content-icon {
+        opacity: 1;
+    }
+
+
+
+    .card .card-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0 25px;
+        width: 280px;
+        height: min-content;
+    }
+
+
+
+    .card .card-content .card-content-title {
+        transition-duration: 0.2s;
+        cursor: pointer;
+        margin-bottom: 12px;
+        font-size: 24px;
+        color: #ffffff;
+    }
+    .card .card-content .card-content-title:hover {
+        color: #2ce8ea;
+    }
+    .card .card-content .card-content-description {
+        margin-bottom: 12px;
+        font-size: 16px;
+        color: #6c81a0;
+    }
+
+
+
+    .card .card-content .card-content-info {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+    .card .card-content .card-content-info .card-content-info-price {
+        display: flex;
+        align-items: center;
+    }
+    .card .card-content .card-content-info .card-content-info-price .card-content-info-price-icon {
+        padding: 4px;
+        font-weight: 300;
+    }
+    .card .card-content .card-content-info .card-content-info-price .card-content-info-price-price {
+        color: #38eceb;
+    }
+    .card .card-content .card-content-info .card-content-info-time {
+        display: flex;
+        align-items: center;
+    }
+    .card .card-content .card-content-info .card-content-info-time .card-content-info-time-icon {
+        padding: 4px;
+    }
+    .card .card-content .card-content-info .card-content-info-time .card-content-info-time-time {
+        padding: 4px;
+        color: #8caad0;
+    }
+
+
+
+    .card .card-content .card-content-splitline {
+        border: 1px solid #2e4058;
+        width: 100%;
+        height: 0;
+    }
+
+
+
+    .card .card-content .card-content-author {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 12px 0;
+        width: 100%;
+        height: min-content;
+    }
+    .card .card-content .card-content-author .card-content-author-icon {
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        width: 30px;
+    }
+    .card .card-content .card-content-author .card-content-author-info {
+        margin: 12px;
+        width: max-content;
+        height: min-content;
+        color: #7890b2;
+    }
+    .card .card-content .card-content-author .card-content-author-info .card-content-author-info-name {
+        transition-duration: 0.2s;
+        cursor: pointer;
+        color: #cccccc;
+    }
+    .card .card-content .card-content-author .card-content-author-info .card-content-author-info-name:hover {
+        color: #2ce8ea;
+    }
+
+
+
+
+    .attribution {
+        position: relative;
+        top: 5%;
+        font-size: 11px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .attribution a {
+        font-size: 13px;
+        color: #2ce8ea;
+    }
+</style>
+
+</html>
